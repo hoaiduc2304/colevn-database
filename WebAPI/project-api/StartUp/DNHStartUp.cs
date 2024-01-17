@@ -60,7 +60,7 @@ namespace project_api.StartUp
             {
                 application.UseDeveloperExceptionPage();
             }
-            //application.UseMiddleware<LogMiddleware>();
+           // application.UseMiddleware<LogMiddleware>();
             application.ConfigureRequestPipelines();
 
             //DynamicRouteBuilder.UseRoutes(application);

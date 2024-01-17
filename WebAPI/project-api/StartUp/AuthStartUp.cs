@@ -23,11 +23,13 @@ namespace project_api.StartUp
                 ID4ClientConfig.setting = authConfig;
             }
             string tenantId = "4739b193-439d-4704-ac83-2e4ad0760fb6";
+            string audId = "36378791-f68e-4a6a-b138-f8490823003c";
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
                     options.Authority = $"https://login.microsoftonline.com/{tenantId}/v2.0"; // Thay thế {your-tenant-id} bằng ID của tenant Azure AD của bạn
-                    options.Audience = "36378791-f68e-4a6a-b138-f8490823003c"; // Thay thế "scope" 
+                    options.Audience = "36378791-f68e-4a6a-b138-f8490823003c"; // Thay thế "scope"  payment 
+
 
                     options.TokenValidationParameters = new TokenValidationParameters()
                     {

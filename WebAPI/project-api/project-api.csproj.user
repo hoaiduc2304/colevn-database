@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActiveDebugProfile>project_api</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>F:\04-Trainning\colevn-api-main\colevn-api-main\WebAPI\project-api\Properties\PublishProfiles\colevn-api - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>F:\04-Trainning\colevn-db\colevn-database\WebAPI\project-api\Properties\PublishProfiles\colevn-api - Web Deploy2.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

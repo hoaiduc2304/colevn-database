@@ -29,8 +29,19 @@ namespace colevn.study.api.Controllers
             _DataLogServices = dNHDataLogServices;
         }
 
+        [HttpGet("")]
+        
+        public async Task<IActionResult> getAllByDay(int day)
+        {
+
+
+            var data = await _DataLogServices.GetAllData(day);
+            PageResultV1 resultData = new PageResultV1(data);
+            return Ok(data);
+        }
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> getById(Int64 id)
         {
 
@@ -42,13 +53,16 @@ namespace colevn.study.api.Controllers
         [HttpPost()]
         public virtual async Task<IActionResult> Post([FromBody] DNHDataLog model)
         {
-            PageResultV1 resultData = new PageResultV1("Ok");
+            
+           model = await _DataLogServices.SaveDataLog(model);
+            PageResultV1 resultData = new PageResultV1(model);
             return Ok(resultData);
         }
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(string id, [FromBody] DNHDataLog model)
         {
-            PageResultV1 resultData = new PageResultV1("Ok");
+            model = await _DataLogServices.SaveDataLog(model);
+            PageResultV1 resultData = new PageResultV1(model);
             return Ok(resultData);
         }
         

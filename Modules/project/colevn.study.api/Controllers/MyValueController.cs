@@ -21,7 +21,7 @@ namespace colevn.study.api.Controllers
     {
         private readonly ILogger<StartsWithColevnResourceFilter> _logger;
         public MyValueController() { }
-        [HttpGet("send-message")]
+        [HttpGet("send-messagesssssssssss")]
         [StartsWithColevnResourceFilter()]
         public async Task<IActionResult> sendMessage(string message)
         {
